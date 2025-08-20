@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .stats {
+      display: flex;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    .follow-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #0095f6;
+      color: white;
+      font-weight: bold;
+    }
+
+    .follow-btn.unfollow {
+      background-color: #efefef;
+      color: #262626;
+    }
+
+    .image-container {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .stats {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="profile">
+      <a href="https://www.instagram.com/nasyxfaizan/profilecard/?igsh=MTJyYXNzYTYxY2hnNA==">
+      <img src="IMG_20250710_103247_016.webp" alt="User Profile" />
+      <div>
+        </a>
+        <div><strong>NasyxFaizan</strong></div>
+        <div class="stats">
+          <span id="followers"><strong>20</strong> Followers</span>
+          <span id="following"><strong>0</strong> Following</span>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/nasyxfaizan/profilecard/?igsh=MTJyYXNzYTYxY2hnNA==">
+    <button class="follow-btn" id="followBtn">Follow</button>
+    </a>
+  </div>
+ <div class="image-container">
+    <img src="Screenshot_20250817_233528_Instagram.jpg" alt="Post Image" />
+    
+  </div>
+</div>
+
+<script>
+  const followBtn = document.getElementById('followBtn');
+  const followersEl = document.getElementById('followers');
+  let following = false;
+  let followerCount = 100;
+
+  followBtn.addEventListener('click', () => {
+    following = !following;
+    followBtn.textContent = following ? 'Unfollow' : 'Follow';
+    followBtn.classList.toggle('unfollow', following);
+
+    followerCount += following ? 1 : -1;
+    followersEl.innerHTML = `<strong>${followerCount}</strong> Followers`;
+  });
+</script>
+
+</body>
+</html>
+
+
+   
+  
+  

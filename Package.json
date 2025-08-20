@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "username": "john_doe",
+    "image": "Screenshot_20250817_223603_Instagram.jpg",
+    "caption": "Chilling in the sun 🌞"
+  },
+  {
+    "id": 2,
+    "username": "jane_smith",
+    "image": "/assets/images/photo2.jpg",
+    "caption": "Exploring the mountains 🏞️"
+  }
+]
+
+   

@@ -1,0 +1,43 @@
+
+ body {
+  font-family: sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.post {
+  width: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post .info {
+  padding: 10px;
+}
+
+.post .username {
+  font-weight: bold;
+}
+ 
